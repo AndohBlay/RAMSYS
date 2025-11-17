@@ -1,0 +1,293 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+/* Header styling start */
+header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  align-self: center;
+  position: sticky;
+  top: 0;
+  height: 80px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.menu-bar {
+  display: none;
+}
+header .logo {
+  align-items: center;
+  padding: 10px;
+}
+
+header .navbar ul {
+  display: flex;
+  text-decoration: none;
+  gap: 2.5rem;
+}
+header .navbar ul li {
+  list-style: none;
+}
+header .navbar ul li a {
+  text-decoration: none;
+  color: black;
+  font: 10em;
+}
+.btn button {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  background-color: #53c351;
+  color: #fafafa;
+  border-radius: 20px;
+  width: 10em;
+}
+
+/* Header styling end */
+
+/* Hero section styling start */
+.hero-section {
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 4rem;
+}
+.hero-section .left {
+  width: 50%;
+}
+
+.hero-section .left h1 {
+  font-size: 42px;
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.hero-section .left p {
+  font-size: 18px;
+  color: #888;
+  padding-block: 20px;
+}
+.hero-btns {
+  display: flex;
+}
+.hero-btns p {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+.hero-section .left a {
+  font-weight: 700;
+}
+.hero-section .right {
+  width: 50%;
+}
+.hero-section .right img {
+  width: 100%;
+  animation-name: slideInBounce;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes slideInBounce {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(10%);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(-5%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.Btn {
+  cursor: pointer;
+  color: whitesmoke;
+  background: #53c351;
+  padding: 12px 30px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.Btn:hover {
+  transition: 0.4s;
+  border-radius: 10px;
+  background: #0ed40b;
+  display: inline-block;
+}
+
+/* Hero section styling end */
+
+/* instruction section styling start */
+section .instruction-content p {
+  text-align: center;
+  padding: 0;
+}
+
+section .instruction-content .instruction-box {
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+section .instruction-content .instruction-box p,
+h3 {
+  text-align: center;
+}
+section .instruction-content .instruction-box .instruction-list {
+  border-radius: 10px;
+  width: 320px;
+  background: whitesmoke;
+  padding: 20px;
+
+  transition: transform 0.3s ease;
+}
+
+section .instruction-content .instruction-box .instruction-list:hover {
+  transform: translateY(-5px);
+}
+
+section .instruction-content .instruction-box .instruction-list img {
+  margin-left: 60px;
+}
+
+/* section instruction end */
+
+/*Green styling starts*/
+.Green {
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 4rem;
+}
+.Green.left {
+  width: 50%;
+}
+
+.Green .left h2 {
+  font-size: 32px;
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+
+.Green .left p {
+  width: 50%;
+}
+.Green .right {
+  width: 50%;
+}
+.Green .right img {
+  width: 800px;
+  animation-name: slideInBounce;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+}
+
+.Green button {
+  margin-top: 10px;
+  background: #058002;
+  width: 145px;
+  border-radius: 10px;
+  padding: 8px;
+  color: whitesmoke;
+}
+/* Green ending */
+
+/* farm stocks */
+.stocks {
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 4rem;
+}
+.stocks .left {
+  width: 50%;
+}
+
+.stocks .left h1 {
+  font-size: 32px;
+}
+
+/*Footer styling start*/
+footer {
+  color: green;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  position: static;
+  width: 100%;
+}
+/*Footer styling end*/
+/* Responsive styling start */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+    nav ul {
+    right: 0;
+    left: 0;
+    position: absolute;
+    top: 80px;
+    flex-direction: column;
+    padding: 20px;
+    gap: 2px;
+    background: whitesmoke;
+  }
+
+  nav ul li:last-child {
+    padding-bottom: 40px;
+  }
+
+  .hero-section .left,
+  .hero-section .right {
+    width: 100%;
+  }
+  .hero-section .right {
+    margin-top: 20px;
+  }
+  .hero-section .left h1 {
+    font-size: 32px;
+  }
+  .hero-section .left p {
+    font-size: 16px;
+  }
+  .navbar li a {
+    display: none;
+  }
+  .menu-bar {
+    display: block;
+  }
+}

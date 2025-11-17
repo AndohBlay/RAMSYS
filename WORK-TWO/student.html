@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <link rel="stylesheet" href="./src/login.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form id="loginForm" class="login-box">
+        <h2>Rav Registration</h2>
+
+        <div class="input-box">
+          <input type="text" id="First Name" required />
+          <label>First Name</label>
+        </div>
+        <div class="input-box">
+          <input type="text" id="last Name" required />
+          <label>last Name</label>
+        </div>
+        <div class="input-box">
+          <input type="email" id="email" required />
+          <label>Email</label>
+        </div>
+
+        <div class="input-box">
+          <input type="password" id="password" required />
+          <label>Password</label>
+        </div>
+
+        <button type="submit" class="btn">REGISTER</button>
+
+        <p class="message" id="message"></p>
+      </form>
+    </div>
+
+    <script src="./src/js/scripts.js"></script>
+  </body>
+</html>

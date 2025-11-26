@@ -1,0 +1,633 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary-light: #15df18;
+  --color-secondary-green: #53c351;
+  --color-gray-text: #4b5563;
+  --color-deep-green: #043805;
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.2);
+  --font-size-base: 1.1rem;
+  --medium-text: 1.1rem;
+  --small-text: 0.9rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+a,
+p {
+  text-decoration: none;
+  font-weight: normal;
+  color: black;
+  font-size: var(--medium-text);
+}
+
+a {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.4s ease-in;
+}
+
+/*
+|--------------------------------------------------------------------------
+| 2. Header and Navigation Styles
+|--------------------------------------------------------------------------
+*/
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: white;
+  box-shadow: var(--shadow);
+}
+
+header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 4rem;
+  height: 80px;
+}
+
+.navbar .logo img {
+  width: 70px;
+  transition: transform 0.3s ease;
+}
+
+.navbar .logo img:hover {
+  transform: scale(1.05);
+}
+
+.navbar ul {
+  display: flex;
+  gap: 2.5rem;
+}
+
+nav ul li a {
+  font-size: 1.125rem;
+  position: relative;
+  padding-bottom: 5px;
+}
+nav ul li a::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: var(--color-secondary-green);
+  transition: width 0.4s ease;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.login-btn {
+  padding: 12px 30px;
+  background: var(--color-secondary-green);
+  color: white;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+.login-btn:hover {
+  background: var(--color-primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menuBar {
+  display: none;
+}
+
+/*
+|--------------------------------------------------------------------------
+| 3. Hero Section Styles
+|--------------------------------------------------------------------------
+*/
+.Hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: calc(100vh - 80px);
+  padding: 60px 4rem;
+  gap: 3rem;
+}
+
+.hero-box {
+  width: 50%;
+}
+
+.hero-box h1 {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.hero-box p {
+  color: var(--color-gray-text);
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero-box .support-text {
+  font-size: 1rem;
+  color: var(--color-gray-text);
+  margin-bottom: 2rem;
+}
+
+.Hero-links {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.Hero-links a,
+.make-green .btn,
+.livestock .links .btn,
+.cash-crop .btn,
+footer .btn {
+  padding: 15px 40px;
+  background: var(--color-secondary-green);
+  color: white;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  width: max-content;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.Hero-links a:hover,
+.make-green .btn:hover,
+.livestock .links .btn:hover,
+.cash-crop .btn:hover,
+footer .btn:hover {
+  background: var(--color-primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Hero-links .Worksbtn {
+  background: none;
+  color: var(--color-secondary-green);
+  margin-left: 20px;
+  font-weight: 600;
+  padding: 15px 10px;
+}
+
+.Hero-links .Worksbtn:hover {
+  color: var(--color-deep-green);
+  background: none;
+  transform: none;
+  box-shadow: none;
+}
+
+.hero-img {
+  width: 50%;
+  max-width: 100%;
+  transform-origin: center;
+}
+
+.hero-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*
+|--------------------------------------------------------------------------
+| 4. Steps Section Styles
+|--------------------------------------------------------------------------
+*/
+.steps-section {
+  padding: 6rem 4rem;
+}
+
+.title {
+  margin-bottom: 3rem;
+}
+
+.title h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.title p,
+h2 {
+  text-align: center;
+}
+
+.title p {
+  font-size: 1.1rem;
+  color: var(--color-gray-text);
+}
+
+.steps-section .steps-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.steps-section .step {
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  width: 300px;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.steps-section .step img {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 25px;
+}
+
+.steps-section .step h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.steps-section .step p {
+  color: var(--color-gray-text);
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.steps-section .step:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: var(--shadow-hover);
+}
+
+/*
+|--------------------------------------------------------------------------
+| 5. About Section Styles
+|--------------------------------------------------------------------------
+*/
+.about {
+  padding: 6rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.make-green,
+.livestock,
+.cash-crop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+.image img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.5s ease-in-out;
+}
+
+.image img:hover {
+  transform: scale(1.05);
+}
+
+.make-green .image img {
+  width: 50%;
+}
+
+.livestock .image img,
+.cash-crop .image img {
+  width: 400px;
+  max-width: 90%;
+}
+
+.about .text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.about .text h2 {
+  font-size: 2.2rem;
+}
+
+.about .text p {
+  color: var(--color-gray-text);
+  font-size: 1.1rem;
+}
+
+.about .text .btn img {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.livestock .links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.link-btn.text-green {
+  color: var(--color-secondary-green);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.link-btn.text-green:hover {
+  color: var(--color-deep-green);
+}
+
+/*
+|--------------------------------------------------------------------------
+| 6. Footer Section Styles
+|--------------------------------------------------------------------------
+*/
+footer {
+  padding: 6rem 4rem 2rem;
+  margin-top: 50px;
+}
+
+footer .footer-box {
+  background-color: var(--color-deep-green);
+  height: 300px;
+  border-radius: 20px;
+  position: relative;
+  margin: 50px 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 40px;
+}
+
+footer .footer-box .text {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 10;
+}
+
+footer .footer-box .text h2 {
+  color: white;
+  font-size: 2rem;
+  text-align: left;
+  padding: 0;
+}
+
+footer .footer-box .text p {
+  color: white;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: left;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.footer-box .manImage {
+  position: absolute;
+  bottom: 0;
+  right: 50px;
+  height: 120%;
+  width: auto;
+  object-fit: contain;
+  z-index: 5;
+  transform: scale(1);
+}
+
+.icons {
+  margin-top: 4rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.icons a img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.icons a img:hover {
+  transform: scale(1.2);
+}
+
+/*
+|--------------------------------------------------------------------------
+| 7. Media Queries (Responsiveness)
+|--------------------------------------------------------------------------
+*/
+
+@media (max-width: 800px) {
+  /* Mobile Menu Styles */
+  .nav-links ul {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    transition: top 0.4s ease-in-out;
+    z-index: 2000;
+  }
+
+  nav ul li:last-child {
+    padding-bottom: 40px;
+  }
+
+  #MenuLinks.open {
+    top: 0;
+    max-height: 500px;
+
+  }
+
+  
+  /* Hide desktop elements */
+  .login-btn,
+  .hero-img,
+  .support-text,
+  .navbar ul {
+    display: none;
+  }
+
+  /* Show menu icon */
+  .menuBar {
+    display: block;
+    z-index: 2100;
+    cursor: pointer;
+  }
+
+  /* Section layout adjustments */
+  section,
+  .livestock,
+  .make-green,
+  .cash-crop {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .make-green,
+  .cash-crop {
+    flex-direction: column-reverse;
+  }
+
+  /* Hero adjustments */
+  .Hero {
+    padding: 0;
+  }
+
+  .hero-box h1 {
+    padding-top: 60px;
+    font-size: 2rem;
+  }
+
+  .text {
+    width: 100%;
+  }
+
+  p,
+  a {
+    font-size: var(--small-text);
+    text-align: center;
+  }
+
+  /* Steps section */
+  .steps-section {
+    padding-top: 30px;
+  }
+
+  .steps-section .title h2 {
+    font-size: 1.9rem;
+  }
+
+  .steps-container .step {
+    width: 550px;
+    height: 320px;
+  }
+
+  .steps-container .step h3 {
+    font-size: 1rem;
+  }
+
+  .steps-container .step p {
+    font-size: 0.8rem;
+  }
+
+  .image {
+    width: 50%;
+  }
+
+  .image img {
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .about .text {
+    padding-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .livestock .image img,
+  .cash-crop .image img {
+    width: 200px;
+  }
+
+  footer {
+    padding: 6rem 4rem 2rem;
+    margin-top: 0;
+    background: var(--color-deep-green);
+  }
+
+  footer .footer-box {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    background: none;
+  }
+
+  .footer-box .manImage {
+    display: none;
+  }
+
+  footer .footer-box .text {
+    text-align: center;
+    width: 100%;
+  }
+
+  footer .footer-box .text h2,
+  footer .footer-box .text p,
+  footer .footer-box .text a {
+    text-align: center;
+    display: inline-block;
+  }
+
+  a.btn {
+    display: inline-block;
+    text-align: center;
+    width: auto;
+    max-width: 250px;
+    padding: 0.8rem 2rem;
+    margin: 0 auto;
+    font-size: 1rem;
+  }
+  .Hero-links .JoinBTN {
+    display: inline-block;
+    text-align: center;
+    width: auto;
+    max-width: 250px;
+    padding: 0.8rem 2rem;
+    margin: 0 auto;
+    font-size: 0.7rem;
+    height: 50px;
+    justify-content: center;
+  }
+
+  .Hero-links a {
+    font-size: 0.8rem;
+  }
+}

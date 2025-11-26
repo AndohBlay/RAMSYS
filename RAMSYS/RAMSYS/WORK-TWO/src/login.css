@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #11cb11, #06ec40);
+}
+
+.container {
+  position: relative;
+  width: 360px;
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+.login-box h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+  background: transparent;
+}
+
+.input-box label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  color: #888;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -15px;
+  color: #2575fc;
+  font-size: 13px;
+}
+
+.input-box input:focus {
+  border-bottom-color: #2575fc;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #0ef706, #11c763);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.4s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #4bb40e, #089b2d);
+  transform: translateY(-3px);
+}
+
+.message {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: red;
+  height: 18px;
+}
